@@ -16,10 +16,10 @@ namespace AppTesteADFS
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        static string sdsSite = "appromateste";
-        static public string authority = "https://adfs.romagnole.com.br/adfs";
-        static public string clientID = "1cb68688-95ee-4e27-acf2-3ab6c0174cdb";
-        static public string resourceURI = "https://" + sdsSite + ".romagnole.com.br/";
+        /*Alterar esses dados conforme necessidade*/
+        static public string authority = "https://adfs.toncoso.com.br/adfs";
+        static public string clientID = "1cb51288-9tcb-4557-a122-3af6c0156cda";
+        static public string resourceURI = "https://url.com.br/";
         static public string clientReturnURI = resourceURI;
 
         string bearerToken;
