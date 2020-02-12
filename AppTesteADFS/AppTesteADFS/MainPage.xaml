@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="AppTesteADFS.MainPage">
+    <StackLayout>
+        <pancakeview:PancakeView HeightRequest="380" HorizontalOptions="FillAndExpand" CornerRadius="0,0,5,5" BackgroundGradientStartColor="#5e060c" BackgroundGradientEndColor="#D91F2D" BackgroundGradientAngle="315">
+            <Image Source="logoRomaBranco.png" VerticalOptions="Center" HorizontalOptions="Center" Margin="20"/>
+        </pancakeview:PancakeView>
+        <pancakeview:PancakeView x:Name="camposLogin" Margin="30,-50,30,0" BackgroundColor="White" CornerRadius="15,15,15,15" Elevation="5" IsVisible="False">
+            <StackLayout Padding="10">
+                <Label Text="Entre com seus dados de acesso do E-mail" FontSize="8" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="sdsUsuario" Keyboard="Email" Placeholder="E-mail" PlaceholderColor="Gray" FontSize="12"/>
+                <Entry x:Name="sdsSenha" IsPassword="True" Placeholder="Senha" PlaceholderColor="Gray" FontSize="12"/>
+                <Button x:Name="btEntrar" Text="Entrar" CornerRadius="20" TextColor="White" BackgroundColor="#D91F2D" Margin="20,10,20,0" Clicked="btEntrar_Clicked"/>
+                <ActivityIndicator x:Name="activityLoading" IsVisible="False" IsRunning="True" IsEnabled="True" Color="#D91F2D" HeightRequest="30"/>
+            </StackLayout>
+        </pancakeview:PancakeView>
+        <WebView x:Name="webView" HeightRequest="1" WidthRequest="1" IsVisible="False"/>
+    </StackLayout>
+</ContentPage>
